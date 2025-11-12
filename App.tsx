@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
-import Portfolio from './components/Portfolio';
-import Services from './components/Services';
+import Project from './components/Project';
+import Achievements from './components/Achievements';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -15,6 +15,7 @@ import type { PortfolioItem } from './types';
 const App: React.FC = () => {
   const [lightboxImage, setLightboxImage] = useState<PortfolioItem | null>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  
 
   const openLightbox = (item: PortfolioItem, index: number) => {
     setLightboxImage(item);
@@ -44,8 +45,8 @@ const App: React.FC = () => {
   <main>
         <Hero />
         <About />
-        <Portfolio onImageClick={openLightbox} />
-        <Services />
+  <Project onImageClick={openLightbox} />
+  <Achievements />
         <Testimonials />
         <Contact />
       </main>

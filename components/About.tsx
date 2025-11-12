@@ -19,13 +19,16 @@ const About: React.FC = () => {
           </div>
           <div className="md:w-1/2 text-lg text-gray-300 space-y-6">
             <p>
-              Hello! I'm Lucas, a passionate photographer dedicated to freezing moments in time. My love for photography started over a decade ago with a simple film camera, and it has since evolved into a full-blown obsession with light, emotion, and storytelling.
+              I'm Lucas Oyugi, a Nairobi-based documentary and black-and-white photographer. My work explores social justice, identity, and the beauty within struggle. Raised in Kibera, my storytelling is grounded in empathy and truth.
             </p>
             <p>
-              My style is a blend of candid documentary and timeless editorial. I believe the best photos are unscripted—the genuine smiles, the quiet tears, the bursts of laughter. My goal is to create images that not only look beautiful but also feel authentic and transport you back to that exact moment.
+              I've collaborated with organizations such as Samuel Hall, Ebanos Stories, InYourShoes, SHOFCO, and the Belt of Somali Women.
             </p>
             <p>
-              Whether it's the intimate vows of a wedding, the proud gaze of a graduate, or the raw beauty of nature, I strive to capture the essence of the story unfolding before my camera. Let's create something beautiful together.
+              Currently, I partnered with Save Girl Save a Generation and Kibera Kids Library, supporting storytelling.
+            </p>
+            <p>
+              My goal is to document human resilience and the power of community through honest visual narratives.
             </p>
           </div>
         </div>

@@ -9,22 +9,13 @@ const Header: React.FC = () => {
   const navLinks = [
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
-    { name: 'Portfolio', href: '#portfolio' },
-    { name: 'Services', href: '#services' },
+  { name: 'Projects', href: '#portfolio' },
+  { name: 'Achievements', href: '#achievements' },
     { name: 'Testimonials', href: '#testimonials' },
     { name: 'Contact', href: '#contact' },
   ];
 
-  // simple admin callback is provided via custom event to avoid prop drillingg
-  const openAdmin = () => {
-    const pwd = prompt('Enter admin password:');
-    // very small local check — change as needed
-    if (pwd === 'lucas-admin') {
-      window.dispatchEvent(new CustomEvent('open-admin'));
-    } else if (pwd) {
-      alert('Incorrect password');
-    }
-  };
+  
 
   useEffect(() => {
     const handleScroll = () => {
@@ -47,7 +38,7 @@ const Header: React.FC = () => {
               {link.name}
             </a>
           ))}
-          <button onClick={openAdmin} className="text-amber-400 hover:text-amber-300 font-semibold">Admin</button>
+          
         </nav>
         <div className="md:hidden">
           <button onClick={() => setIsOpen(!isOpen)} className="text-gray-300 hover:text-amber-400">
