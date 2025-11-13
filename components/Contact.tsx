@@ -49,9 +49,9 @@ const Contact: React.FC = () => {
             </div>
              <div className="md:w-1/2 text-center md:text-left">
                 <h3 className="text-2xl font-bold text-white mb-4">Contact Information</h3>
-                <p className="text-gray-400 mb-2">Based in New York, NY</p>
+                <p className="text-gray-400 mb-2">Based in Kenya, Nairobi</p>
                 <p className="text-gray-400 mb-2">Available for worldwide travel.</p>
-                <a href="mailto:hello@lucasphoto.com" className="text-amber-400 hover:text-amber-300 text-lg block mb-6">hello@lucasphoto.com</a>
+                <a href="mailto:lookeeymoha02@gmail.com" className="text-amber-400 hover:text-amber-300 text-lg block mb-6">lookeeymoha02@gmail.com</a>
 
                 <h3 className="text-2xl font-bold text-white mb-4">Follow Me</h3>
                 <div className="flex justify-center md:justify-start space-x-6">
