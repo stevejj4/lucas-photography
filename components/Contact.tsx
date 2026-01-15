@@ -5,16 +5,34 @@ import { WhatsAppIcon, InstagramIcon, FacebookIcon, TwitterIcon } from './icons'
 const Contact: React.FC = () => {
   const [status, setStatus] = useState('');
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus('Sending...');
-    // In a real app, you would handle form submission here.
-    // We'll simulate a success message.
-    setTimeout(() => {
-      setStatus('Message sent successfully! I will get back to you soon.');
-      (e.target as HTMLFormElement).reset();
-      setTimeout(() => setStatus(''), 5000);
-    }, 1000);
+    const form = e.target as HTMLFormElement;
+    const formData = new FormData(form);
+    const data = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      message: formData.get('message'),
+    };
+    try {
+      const response = await fetch('http://localhost:8080/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+      if (response.ok) {
+        setStatus('Message sent successfully! I will get back to you soon.');
+        form.reset();
+        setTimeout(() => setStatus(''), 5000);
+      } else {
+        setStatus('Failed to send message. Please try again.');
+      }
+    } catch (error) {
+      setStatus('An error occurred. Please try again.');
+    }
   };
   
   return (
